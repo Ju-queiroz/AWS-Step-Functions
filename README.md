@@ -56,7 +56,7 @@ Fluxo: **Validar conta → se válido, grava no DynamoDB → senão, falha.**
 ---
 
 ## 🖥️ Workflow Studio — Tela Inicial
-![Workflow Studio](./workflow-studio.png)
+![Workflow Studio](./workflow.png)
 
 ➡️ Aqui temos a interface inicial do **Workflow Studio**.  
 - O fluxo começa em **Start** e termina em **End**.  
@@ -69,7 +69,7 @@ Fluxo: **Validar conta → se válido, grava no DynamoDB → senão, falha.**
 ---
 
 ## ⚡ Adicionando uma Função Lambda
-![Lambda Invoke](./lambda-invoke.png)
+![Lambda Invoke](./lambda.png)
 
 ➡️ Neste print, arrastei e conectei o estado **Lambda Invoke** ao fluxo.  
 - Essa task é responsável por chamar uma função Lambda dentro do fluxo.  
