@@ -55,6 +55,29 @@ Fluxo: **Validar conta → se válido, grava no DynamoDB → senão, falha.**
 
 ---
 
+## 🖥️ Workflow Studio — Tela Inicial
+![Workflow Studio](./workflow-studio.png)
+
+➡️ Aqui temos a interface inicial do **Workflow Studio**.  
+- O fluxo começa em **Start** e termina em **End**.  
+- Podemos arrastar serviços da AWS (Lambda, SNS, DynamoDB, HTTP APIs etc.) para montar o workflow.  
+- À direita, é possível configurar:  
+  - **Comentário** (descrição da state machine),  
+  - **TimeoutSeconds** (tempo máximo da execução),  
+  - E a linguagem de query recomendada (**JSONata**).  
+
+---
+
+## ⚡ Adicionando uma Função Lambda
+![Lambda Invoke](./lambda-invoke.png)
+
+➡️ Neste print, arrastei e conectei o estado **Lambda Invoke** ao fluxo.  
+- Essa task é responsável por chamar uma função Lambda dentro do fluxo.  
+- O Step Functions já adiciona automaticamente as conexões entre **Start → Lambda → End**.  
+- Essa função pode ser configurada para receber parâmetros de entrada, validar dados e devolver um resultado que será usado nos próximos estados.  
+
+---
+
 ## 📑 Exemplo em JSON
 
 ```json
